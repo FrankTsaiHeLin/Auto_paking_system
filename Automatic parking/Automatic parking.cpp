@@ -1,3 +1,4 @@
+//Copyright by Frank Tsai
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,10 +34,10 @@ class car
 	
 	float velocity;//=16;//16m per second, 60km per hour
 	float acceleration;//=0;
-	float rMin;//³Ì¤p°jÂà¥b®|
+	float rMin;//æœ€å°è¿´è½‰åŠå¾‘
 	float rMax;
-	float aMin;//³Ì¤p§¨¨¤
-	float dResponse;//¤ÏÀ³¶ZÂ÷ 
+	float aMin;//æœ€å°å¤¾è§’
+	float dResponse;//åæ‡‰è·é›¢ 
 	//point direction;//vector
 	//int status=0; //0 for straight line, 1 for arc
 	point b[4];
@@ -942,7 +943,7 @@ point inputv()//input v
 void lsort(int n,point *v)
 {
 	car c;
-	point v0={1,0},Vtemp;//v0°ò·Ç , Vtemp¦V¶q¼È¦s 
+	point v0={1,0},Vtemp;//v0åŸºæº– , Vtempå‘é‡æš«å­˜ 
 	float *list;
 	
 	list=new float[n];
@@ -971,7 +972,7 @@ void bsort(int n,point *v,float *list)
 	if(n<=0)return;
 	for(int i=0;i<n-1;i++)
 	{
-		if(*(list+i)>*(list+i+1))//not*  is ¦ì§} 
+		if(*(list+i)>*(list+i+1))//not*  is ä½å€ 
 		{
 			ftemp=*(list+i);
 			*(list+i)=*(list+i+1);
